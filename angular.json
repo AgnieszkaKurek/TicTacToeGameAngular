@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "TicTacToeGameAngular": {
+    "TiCTacToeGameAngular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/TicTacToeGameAngular",
+            "outputPath": "dist/TiCTacToeGameAngular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "TicTacToeGameAngular:build"
+            "browserTarget": "TiCTacToeGameAngular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "TicTacToeGameAngular:build:production"
+              "browserTarget": "TiCTacToeGameAngular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "TicTacToeGameAngular:build"
+            "browserTarget": "TiCTacToeGameAngular:build"
           }
         },
         "test": {
@@ -111,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "TicTacToeGameAngular:serve"
+            "devServerTarget": "TiCTacToeGameAngular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "TicTacToeGameAngular:serve:production"
+              "devServerTarget": "TiCTacToeGameAngular:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "TicTacToeGameAngular"
+  "defaultProject": "TiCTacToeGameAngular"
 }
