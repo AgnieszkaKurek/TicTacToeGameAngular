@@ -16,6 +16,6 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: dist/TicTacToeGameAngular
+  local-dir: build
   on:
     branch: master
