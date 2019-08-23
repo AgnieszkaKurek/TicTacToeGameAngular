@@ -1,46 +1,44 @@
 import { Injectable } from '@angular/core';
-import { TicTacToeCombination } from './moduls/tic-tac-toe-combination';
-import { TicTacToeGamePlayers } from './moduls/tic-tac-toe-game-players.enum';
-import { TicTacToeGameStatus } from './moduls/tic-tac-toe-game-status.enum';
+import { TicTacToeCombination } from './models/tic-tac-toe-combination';
+import { TicTacToeGamePlayer } from './models/tic-tac-toe-game-player.enum';
+import { TicTacToeGameStatus } from './models/tic-tac-toe-game-status.enum';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TicTacToeGameService {
 
-  public board: TicTacToeGamePlayers[];
-  public startingPlayer: TicTacToeGamePlayers;
-  public nextPlayer: TicTacToeGamePlayers;
+  public board: TicTacToeGamePlayer[];
+  public startingPlayer: TicTacToeGamePlayer;
+  public nextPlayer: TicTacToeGamePlayer;
 
   public constructor() {
     this.reset();
   }
 
   public reset(): void {
-    this.board = new Array<TicTacToeGamePlayers>(9);
-    this.startingPlayer = this.startingPlayer === TicTacToeGamePlayers.X ? TicTacToeGamePlayers.O : TicTacToeGamePlayers.X;
+    this.board = new Array<TicTacToeGamePlayer>(9);
+    this.startingPlayer = this.startingPlayer === TicTacToeGamePlayer.X ? TicTacToeGamePlayer.O : TicTacToeGamePlayer.X;
     this.nextPlayer = this.startingPlayer;
   }
 
   public move(position: number): boolean {
     if (this.isPositionEmpty(position)) {
       this.board[position] = this.nextPlayer;
-      this.nextPlayer = this.nextPlayer === TicTacToeGamePlayers.X ? TicTacToeGamePlayers.O : TicTacToeGamePlayers.X;
+      this.nextPlayer = this.nextPlayer === TicTacToeGamePlayer.X ? TicTacToeGamePlayer.O : TicTacToeGamePlayer.X;
       return true;
     }
     return false;
   }
-  public isPositionEmpty(position: number) {
-    return this.board[position] === undefined;
-  }
-  status() {
+
+  public status(): TicTacToeGameStatus {
     const winningCombination = this.getWinningCombination();
     if (winningCombination) {
       return this.board[winningCombination.position1] ===
-        TicTacToeGamePlayers.X ? TicTacToeGameStatus.statusXWins : TicTacToeGameStatus.statusOWins;
+        TicTacToeGamePlayer.X ? TicTacToeGameStatus.X_WINS : TicTacToeGameStatus.O_WINS;
     }
-    if (this.board.includes(undefined)) { return TicTacToeGameStatus.statusUnfinished; }
-    return TicTacToeGameStatus.statusDraw;
+    if (this.board.includes(undefined)) { return TicTacToeGameStatus.UNFINISHED; }
+    return TicTacToeGameStatus.DRAW;
   }
 
   public getWinningCombination(): TicTacToeCombination {
@@ -57,9 +55,14 @@ export class TicTacToeGameService {
     return possibleWinningCombinations.find(combination => this.isWinningCombination(combination));
   }
 
+  private isPositionEmpty(position: number): boolean {
+    return this.board[position] === undefined;
+  }
+
   private isWinningCombination(combination: TicTacToeCombination): boolean {
-    return this.board[combination.position1] !== undefined &&
-      this.board[combination.position1] === this.board[combination.position2] &&
-      this.board[combination.position2] === this.board[combination.position3];
+    return this.board[combination.position1] !== undefined
+      && this.board[combination.position1] === this.board[combination.position2]
+      && this.board[combination.position2] === this.board[combination.position3]
+      ;
   }
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { TicTacToeGameStatus } from './moduls/tic-tac-toe-game-status.enum.js';
+import { TicTacToeGameStatus } from './models/tic-tac-toe-game-status.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +15,11 @@ export class TicTacToeGameScoreService {
   }
 
   public update(status: TicTacToeGameStatus): void {
-    if (status === TicTacToeGameStatus.statusXWins) {
+    if (status === TicTacToeGameStatus.X_WINS) {
       this.scorePlayerX++;
-    } else if (status === TicTacToeGameStatus.statusOWins) {
+    } else if (status === TicTacToeGameStatus.O_WINS) {
       this.scorePlayerO++;
-    } else if (status === TicTacToeGameStatus.statusDraw) {
+    } else if (status === TicTacToeGameStatus.DRAW) {
       this.numberOfDraws++;
     }
   }
