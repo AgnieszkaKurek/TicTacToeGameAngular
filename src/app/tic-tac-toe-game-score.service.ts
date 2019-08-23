@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { TicTacToeGameStatus } from './tic-tac-toe-game-status.enum.js';
+import { TicTacToeGameStatus } from './moduls/tic-tac-toe-game-status.enum.js';
 
 @Injectable({
   providedIn: 'root'
