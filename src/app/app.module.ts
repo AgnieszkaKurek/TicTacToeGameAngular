@@ -10,6 +10,6 @@ import { GameComponent } from './game/game.component';
     BrowserModule
   ],
   providers: [],
-  bootstrap: []
+  bootstrap: [GameComponent]
 })
 export class AppModule { }

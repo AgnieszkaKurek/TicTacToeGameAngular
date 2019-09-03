@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { TicTacToeGameService } from '../tic-tac-toe-game.service';
 
 @Component({
-  selector: 'tt',
+  selector: 'ttt-game',
   templateUrl: './game.component.html',
-  styleUrls: ['./game.component.css']
 })
-export class GameComponent implements OnInit {
+export class GameComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  constructor(public game: TicTacToeGameService) { }
 }
