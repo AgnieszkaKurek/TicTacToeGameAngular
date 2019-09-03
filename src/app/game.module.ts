@@ -12,4 +12,4 @@ import { GameComponent } from './game/game.component';
   providers: [],
   bootstrap: [GameComponent]
 })
-export class AppModule { }
+export class GameModule { }
