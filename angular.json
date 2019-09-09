@@ -22,7 +22,9 @@
             "assets": [
               "src/favicon.ico"
             ],
-            "styles": [],
+            "styles": [
+              "src/style.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -101,6 +103,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "TicTacToeGameAngular"
 }
