@@ -1,4 +1,4 @@
-$hederAndFooterColor: #9966cc;
+@import "../../assets/variables.scss";
 
 :host {
   display: flex;
@@ -34,7 +34,7 @@ footer {
 header,
 footer {
   width: 100%;
-  color: $hederAndFooterColor;
+  color: $mainColor;
 }
 
 @media (max-width: 1000px) {
