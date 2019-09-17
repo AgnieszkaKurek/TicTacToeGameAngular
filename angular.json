@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "ttt",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -20,11 +20,10 @@
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/favicon.ico"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/styles.scss"
             ],
             "scripts": []
           },
@@ -85,12 +84,9 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/favicon.ico"
             ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "styles": [],
             "scripts": []
           }
         },
@@ -99,27 +95,15 @@
           "options": {
             "tsConfig": [
               "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
+              "tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
           }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "TicTacToeGameAngular:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "TicTacToeGameAngular:serve:production"
-            }
-          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "TicTacToeGameAngular"
 }

@@ -1,0 +1,12 @@
+@import'./variables.scss';
+
+html {
+  min-height: 100%;
+  background: linear-gradient(#99cccc, $mainColor);
+}
+
+body {
+  color:$basicColor;
+  font-weight: bold;
+  text-align: center;
+}
