@@ -1,2 +1,5 @@
-<ttt-box *ngFor="let box of game.board">
-</ttt-box>
+<ng-container *ngFor="let status of game.board, let position = index">
+    <ttt-box [status]="status"
+             [position]="index">
+    </ttt-box>
+</ng-container>

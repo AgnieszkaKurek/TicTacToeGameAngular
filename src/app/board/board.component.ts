@@ -7,5 +7,7 @@ import { TicTacToeGameService } from '../tic-tac-toe-game.service';
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent {
-  constructor(public game: TicTacToeGameService) { }
+  public constructor(
+    public game: TicTacToeGameService,
+  ) { }
 }

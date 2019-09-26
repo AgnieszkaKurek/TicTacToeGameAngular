@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { TicTacToeGamePlayer } from '../models/tic-tac-toe-game-player.enum';
 
 @Component({
   selector: 'ttt-box',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./box.component.scss']
 })
 export class BoxComponent {
+  @Input()
+  public status: TicTacToeGamePlayer;
 
+  @Input()
+  public position: number;
 }
