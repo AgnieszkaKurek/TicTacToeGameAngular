@@ -1,0 +1,9 @@
+:host {
+  clear: both;
+  display: table;
+  margin: 0 auto;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+}

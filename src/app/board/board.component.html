@@ -1,4 +1,5 @@
-<div>
-    Hello word from board component
-    <ttt-box></ttt-box>
-</div>
+<ng-container *ngFor="let status of game.board, let position = index">
+    <ttt-box [status]="status"
+             [position]="index">
+    </ttt-box>
+</ng-container>
