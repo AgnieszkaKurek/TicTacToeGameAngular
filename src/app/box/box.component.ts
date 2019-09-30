@@ -1,5 +1,5 @@
+import { TicTacToeGamePlayer } from './../models/tic-tac-toe-game-player.enum';
 import { Component, Input } from '@angular/core';
-import { TicTacToeGamePlayer } from '../models/tic-tac-toe-game-player.enum';
 
 @Component({
   selector: 'ttt-box',
@@ -12,4 +12,8 @@ export class BoxComponent {
 
   @Input()
   public position: number;
+
+  public playerX: TicTacToeGamePlayer = TicTacToeGamePlayer.X;
+
+  public playerO: TicTacToeGamePlayer = TicTacToeGamePlayer.O;
 }

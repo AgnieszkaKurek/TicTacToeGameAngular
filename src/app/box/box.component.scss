@@ -1,3 +1,5 @@
+@import "../../assets/variables.scss";
+
 :host {
   list-style: none;
   background: #f1f1f1;
@@ -8,4 +10,17 @@
   height: 185px;
   padding: 0;
   text-align: center;
+}
+
+.player-x {
+  color: $drawingXcolor;
+}
+
+.player-o {
+  color: $drawingOcolor;
+}
+
+.player-x,
+.player-o {
+  font-size: 150px;
 }

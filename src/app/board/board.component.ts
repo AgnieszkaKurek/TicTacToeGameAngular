@@ -9,5 +9,6 @@ import { TicTacToeGameService } from '../tic-tac-toe-game.service';
 export class BoardComponent {
   public constructor(
     public game: TicTacToeGameService,
-  ) { }
+  ) {
+  }
 }
