@@ -1,5 +1,5 @@
 import { TicTacToeGamePlayer } from './../models/tic-tac-toe-game-player.enum';
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostListener } from '@angular/core';
 
 @Component({
   selector: 'ttt-box',
@@ -16,4 +16,9 @@ export class BoxComponent {
   public playerX: TicTacToeGamePlayer = TicTacToeGamePlayer.X;
 
   public playerO: TicTacToeGamePlayer = TicTacToeGamePlayer.O;
+
+  @HostListener('click')
+  public onClick() {
+    console.log('TEST');
+  }
 }
