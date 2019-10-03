@@ -1,4 +1,5 @@
 import { TicTacToeGamePlayer } from './../models/tic-tac-toe-game-player.enum';
+import { TicTacToeGameService } from './../tic-tac-toe-game.service';
 import { Component, Input, HostListener } from '@angular/core';
 
 @Component({
@@ -7,8 +8,11 @@ import { Component, Input, HostListener } from '@angular/core';
   styleUrls: ['./box.component.scss']
 })
 export class BoxComponent {
-  @Input()
-  public status: TicTacToeGamePlayer;
+
+  public constructor(
+    public game: TicTacToeGameService,
+  ) {
+  }
 
   @Input()
   public position: number;
@@ -17,8 +21,10 @@ export class BoxComponent {
 
   public playerO: TicTacToeGamePlayer = TicTacToeGamePlayer.O;
 
+  public status = this.game.board[this.position];
+
   @HostListener('click')
   public onClick() {
-    console.log('TEST');
+
   }
 }
