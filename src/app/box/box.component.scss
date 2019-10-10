@@ -1,5 +1,12 @@
 @import "../../assets/variables.scss";
 
+@mixin user-select($select) {
+  @each $pre in -webkit-, -moz-, -ms-, -o- {
+    #{$pre + user-select}: #{$select};
+  }
+  #{user-select}: #{$select};
+}
+
 :host {
   list-style: none;
   background: #f1f1f1;
@@ -10,6 +17,7 @@
   height: 185px;
   padding: 0;
   text-align: center;
+  @include user-select(none);
 }
 
 .player-x {
