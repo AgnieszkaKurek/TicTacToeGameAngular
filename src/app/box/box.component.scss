@@ -17,6 +17,7 @@
   height: 185px;
   padding: 0;
   text-align: center;
+  -webkit-touch-callout: none;
   @include user-select(none);
 }
 
