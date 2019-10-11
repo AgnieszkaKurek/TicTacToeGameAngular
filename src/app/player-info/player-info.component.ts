@@ -1,3 +1,4 @@
+import { TicTacToeGameService } from './../tic-tac-toe-game.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,4 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./player-info.component.scss']
 })
 export class PlayerInfoComponent {
+  public constructor(
+    public game: TicTacToeGameService,
+  ) {
+  }
 }
