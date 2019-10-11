@@ -1,4 +1,11 @@
 <div>
-  <h2>Player info</h2>
-  Hello word from player-info component
+  <h2>Next player</h2>
+  <ng-container [ngSwitch]="game.nextPlayer">
+    <span *ngSwitchCase="'x'">
+      Player X
+    </span>
+    <span *ngSwitchCase="'o'">
+      Player O
+    </span>
+  </ng-container>
 </div>

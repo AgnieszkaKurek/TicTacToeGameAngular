@@ -1,9 +1,9 @@
-<ng-container [ngSwitch]="status">
-  <span *ngSwitchCase="playerX"
+<ng-container [ngSwitch]="getBoxStatus()">
+  <span *ngSwitchCase="'x'"
         class="player-x">
     X
   </span>
-  <span *ngSwitchCase="playerO"
+  <span *ngSwitchCase="'o'"
         class="player-o">
     O
   </span>
