@@ -11,7 +11,6 @@ before_script:
 script:
 - ng lint
 - ng test
-- npm run test-headless
 - ng build --prod --base-href https://AgnieszkaKurek.github.io/TicTacToeGameAngular/
 deploy:
   provider: pages
