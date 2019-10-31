@@ -6,6 +6,9 @@ Run `npm install` to install dependencies
 ## Run locally
 Run `npm start` to run the app locally
 
+## Running unit tests
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
 ## Continuous Integration
 Check travis pipeline:
 [![Build Status](https://travis-ci.org/AgnieszkaKurek/TicTacToeGameAngular.svg?branch=master)](https://travis-ci.org/AgnieszkaKurek/TicTacToeGameAngular)
