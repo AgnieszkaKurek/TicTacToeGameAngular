@@ -10,7 +10,7 @@ describe('TicTacToeGameService', () => {
     game = new TicTacToeGameService();
   });
 
-  it('should be created', () => {
+  it('The test has been initiated', () => {
     const service: TicTacToeGameService = TestBed.get(TicTacToeGameService);
     expect(service).toBeTruthy();
   });
