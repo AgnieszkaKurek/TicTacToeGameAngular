@@ -31,4 +31,7 @@ export class BoxComponent {
   public getBoxStatus(): TicTacToeGamePlayer {
     return this.game.board[this.position];
   }
+  public getWinningBox(): boolean {
+    return this.game.isWinningBox(this.position);
+  }
 }

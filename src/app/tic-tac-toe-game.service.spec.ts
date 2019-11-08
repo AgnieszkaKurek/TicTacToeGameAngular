@@ -158,4 +158,66 @@ describe('TicTacToeGameService', () => {
     game.move(8);
     expect(game.getWinningCombination()).toBeUndefined();
   });
+
+  it('Given game, when player x won winning combination positions are true', () => {
+    game.move(0);
+    game.move(3);
+    game.move(1);
+    game.move(4);
+    game.move(2);
+    expect(game.isWinningBox(0)).toEqual(true);
+    expect(game.isWinningBox(3)).toEqual(false);
+    expect(game.isWinningBox(1)).toEqual(true);
+    expect(game.isWinningBox(3)).toEqual(false);
+    expect(game.isWinningBox(2)).toEqual(true);
+    expect(game.isWinningBox(5)).toEqual(false);
+    expect(game.isWinningBox(8)).toEqual(false);
+  });
+
+  it('Given game, when player y won winning combination positions are true', () => {
+    game.move(0);
+    game.move(1);
+    game.move(2);
+    game.move(4);
+    game.move(5);
+    game.move(7);
+    expect(game.isWinningBox(0)).toEqual(false);
+    expect(game.isWinningBox(1)).toEqual(true);
+    expect(game.isWinningBox(2)).toEqual(false);
+    expect(game.isWinningBox(4)).toEqual(true);
+    expect(game.isWinningBox(5)).toEqual(false);
+    expect(game.isWinningBox(7)).toEqual(true);
+  });
+
+  it('Given game, when the game ends in a draw, there is no winning combination and all the possesions are false', () => {
+    game.move(0);
+    game.move(1);
+    game.move(3);
+    game.move(6);
+    game.move(4);
+    game.move(5);
+    game.move(7);
+    game.move(8);
+    game.move(2);
+    expect(game.isWinningBox(0)).toEqual(false);
+    expect(game.isWinningBox(1)).toEqual(false);
+    expect(game.isWinningBox(3)).toEqual(false);
+    expect(game.isWinningBox(6)).toEqual(false);
+    expect(game.isWinningBox(4)).toEqual(false);
+    expect(game.isWinningBox(5)).toEqual(false);
+    expect(game.isWinningBox(7)).toEqual(false);
+    expect(game.isWinningBox(8)).toEqual(false);
+    expect(game.isWinningBox(2)).toEqual(false);
+  });
+
+  it('Given game, when the game is not over, there is no winning combination and all the possesions are false', () => {
+    game.move(0);
+    game.move(1);
+    game.move(3);
+    game.move(6);
+    expect(game.isWinningBox(0)).toEqual(false);
+    expect(game.isWinningBox(1)).toEqual(false);
+    expect(game.isWinningBox(3)).toEqual(false);
+    expect(game.isWinningBox(6)).toEqual(false);
+  });
 });
