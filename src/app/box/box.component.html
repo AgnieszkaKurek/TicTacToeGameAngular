@@ -1,12 +1,10 @@
 <ng-container [ngSwitch]="getBoxStatus()">
-  <div [ngClass]="{ 'winning-box': getWinningBox()}">
-    <span *ngSwitchCase="'x'"
-          class="player-x">
-      X
-    </span>
-    <span *ngSwitchCase="'o'"
-          class="player-o">
-      O
-    </span>
-  </div>
+  <span *ngSwitchCase="'x'"
+        class="player-x">
+    X
+  </span>
+  <span *ngSwitchCase="'o'"
+        class="player-o">
+    O
+  </span>
 </ng-container>

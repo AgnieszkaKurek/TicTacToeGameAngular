@@ -1,7 +1,7 @@
 import { TicTacToeGameScoreService } from './../tic-tac-toe-game-score.service';
 import { TicTacToeGamePlayer } from './../models/tic-tac-toe-game-player.enum';
 import { TicTacToeGameService } from './../tic-tac-toe-game.service';
-import { Component, Input, HostListener } from '@angular/core';
+import { Component, Input, HostListener, HostBinding } from '@angular/core';
 import { TicTacToeGameStatus } from '../models/tic-tac-toe-game-status.enum';
 
 @Component({
@@ -28,10 +28,13 @@ export class BoxComponent {
     }
   }
 
+  @HostBinding('class')
+  public get classes(): string {
+    return this.game.isWinningBox(this.position) ? 'winning-box' : '';
+  }
+
   public getBoxStatus(): TicTacToeGamePlayer {
     return this.game.board[this.position];
   }
-  public getWinningBox(): boolean {
-    return this.game.isWinningBox(this.position);
-  }
+
 }
