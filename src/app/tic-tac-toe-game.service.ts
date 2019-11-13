@@ -65,4 +65,14 @@ export class TicTacToeGameService {
       && this.board[combination.position2] === this.board[combination.position3]
       ;
   }
+
+  public isWinningBox(position: number): boolean {
+    const winningCombination = this.getWinningCombination();
+    if (!winningCombination) {
+      return false;
+    }
+    return position === winningCombination.position1 ||
+      position === winningCombination.position2 ||
+      position === winningCombination.position3;
+  }
 }
