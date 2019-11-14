@@ -1,4 +1,24 @@
 <div>
   <h2>Punctation</h2>
-  Hello word from component score
+  <div>
+    Player X won
+    <span [ngClass]="{'score-highlight': game.status() === status.x}">
+      {{score.scorePlayerX}}
+    </span>
+    times
+  </div>
+  <div>
+    Player O won
+    <span [ngClass]="{'score-highlight': game.status() === status.o}">
+      {{score.scorePlayerO}}
+    </span>
+    times
+  </div>
+  <div>
+    There were
+    <span [ngClass]="{'score-highlight': game.status() === status.draw}">
+      {{score.numberOfDraws}}
+    </span>
+    draw(s)
+  </div>
 </div>
