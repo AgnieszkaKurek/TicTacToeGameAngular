@@ -1,1 +1,6 @@
-@import '../../assets/headers.scss';
+@import "../../assets/headers.scss";
+@import "../../assets/variables.scss";
+
+.score-highlight {
+  color: $vividColor;
+}
