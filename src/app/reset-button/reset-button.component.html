@@ -1,3 +1,18 @@
-<div>
-  Hello word from reset-button component
+<div [ngSwitch]="game.status()">
+
+  <button *ngSwitchCase="status.x"
+          class="reset-game"
+          (click)="game.reset()">
+    Start New Game
+  </button>
+  <button *ngSwitchCase="status.o"
+          class="reset-game"
+          (click)="game.reset()">
+    Start New Game
+  </button>
+  <button *ngSwitchCase="status.draw"
+          class="reset-game"
+          (click)="game.reset()">
+    Start New Game
+  </button>
 </div>
