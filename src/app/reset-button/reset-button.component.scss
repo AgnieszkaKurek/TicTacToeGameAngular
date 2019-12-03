@@ -1,0 +1,16 @@
+@import "../../assets/variables.scss";
+
+.reset-game {
+  height: 30px;
+  width: 150px;
+  border-radius: 4px;
+  border: none;
+  background: $vividColor;
+  color: $basicColor;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.reset-game:hover {
+  background: $fadeColor;
+}

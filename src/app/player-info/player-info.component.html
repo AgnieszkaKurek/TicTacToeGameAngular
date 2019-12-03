@@ -1,11 +1,4 @@
-<div>
-  <h2>Next player</h2>
-  <ng-container [ngSwitch]="game.nextPlayer">
-    <span *ngSwitchCase="'x'">
-      Player X
-    </span>
-    <span *ngSwitchCase="'o'">
-      Player O
-    </span>
-  </ng-container>
-</div>
+<ttt-next-player-info *ngIf="!isGameFinished()">
+</ttt-next-player-info>
+<ttt-winner-info *ngIf="isGameFinished()">
+</ttt-winner-info>

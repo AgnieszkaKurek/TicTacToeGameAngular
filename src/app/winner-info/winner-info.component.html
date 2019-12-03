@@ -1,0 +1,12 @@
+<div class="winner-info"
+     [ngSwitch]="game.status()">
+  <span *ngSwitchCase="status.x">
+    Winner is X
+  </span>
+  <span *ngSwitchCase="status.o">
+    Winner is O
+  </span>
+  <span *ngSwitchCase="status.draw">
+    Draw
+  </span>
+</div>
