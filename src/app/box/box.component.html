@@ -1,10 +1,19 @@
-<ng-container [ngSwitch]="getBoxStatus()">
-  <span *ngSwitchCase="'x'"
-        class="player-x">
-    X
-  </span>
-  <span *ngSwitchCase="'o'"
-        class="player-o">
-    O
-  </span>
-</ng-container>
+<span class="container"
+      [ngClass]="{
+    'winning-box': isWinningBox(),
+    'x-next-player': isXNextPlayer(),
+    'o-next-player': isONextPlayer(),
+    'move-forbidden': isMoveForbidden()
+  }"
+      (click)="handleGameMove()">
+  <ng-container [ngSwitch]="getBoxStatus()">
+    <span *ngSwitchCase="'x'"
+          class="player-x">
+      X
+    </span>
+    <span *ngSwitchCase="'o'"
+          class="player-o">
+      O
+    </span>
+  </ng-container>
+</span>
