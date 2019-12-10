@@ -1,7 +1,7 @@
 import { TicTacToeGameScoreService } from './../tic-tac-toe-game-score.service';
 import { TicTacToeGamePlayer } from './../models/tic-tac-toe-game-player.enum';
 import { TicTacToeGameService } from './../tic-tac-toe-game.service';
-import { Component, Input, HostListener, HostBinding } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TicTacToeGameStatus } from '../models/tic-tac-toe-game-status.enum';
 
 @Component({
@@ -20,7 +20,6 @@ export class BoxComponent {
   @Input()
   public position: number;
 
-  @HostListener('click')
   public handleGameMove(): void {
     if (this.game.status() === TicTacToeGameStatus.UNFINISHED) {
       this.game.move(this.position);
@@ -28,13 +27,27 @@ export class BoxComponent {
     }
   }
 
-  @HostBinding('class')
-  public get classes(): string {
-    return this.game.isWinningBox(this.position) ? 'winning-box' : '';
-  }
-
-  public getBoxStatus(): TicTacToeGamePlayer {
+  public getBoxStatus(): TicTacToeGamePlayer | undefined {
     return this.game.board[this.position];
   }
 
+  public isXNextPlayer(): boolean {
+    return this.canMove() && this.game.nextPlayer === TicTacToeGamePlayer.X;
+  }
+
+  public isONextPlayer(): boolean {
+    return this.canMove() && this.game.nextPlayer === TicTacToeGamePlayer.O;
+  }
+
+  public isMoveForbidden(): boolean {
+    return !!this.getBoxStatus() || this.game.status() !== TicTacToeGameStatus.UNFINISHED;
+  }
+
+  public isWinningBox(): boolean {
+    return this.game.isWinningBox(this.position);
+  }
+
+  private canMove(): boolean {
+    return !this.getBoxStatus() && this.game.status() === TicTacToeGameStatus.UNFINISHED;
+  }
 }
