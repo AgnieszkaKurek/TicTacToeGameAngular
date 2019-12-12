@@ -5,14 +5,14 @@
     <span [ngClass]="{'score-highlight': game.status() === status.x}">
       {{score.scorePlayerX}}
     </span>
-    times
+    time(s)
   </div>
   <div>
     Player O won
     <span [ngClass]="{'score-highlight': game.status() === status.o}">
       {{score.scorePlayerO}}
     </span>
-    times
+    time(s)
   </div>
   <div>
     There were
