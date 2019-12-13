@@ -1,0 +1,29 @@
+.container {
+  box-sizing: border-box;
+  width: 185px;
+  height: 185px;
+  padding: 0;
+}
+
+.player-x,
+.player-o {
+  font-size: 150px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 100px;
+    height: 100px;
+  }
+  .player-x,
+  .player-o {
+    font-size: 100px;
+  }
+}

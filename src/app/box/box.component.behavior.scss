@@ -12,12 +12,9 @@
   background: $neutralColorNo1;
   border: 1px solid $neutralColorNo2;
   float: left;
-  box-sizing: border-box;
-  width: 185px;
-  height: 185px;
-  padding: 0;
   text-align: center;
   @include user-select(none);
+  
 }
 
 .player-x {
@@ -26,11 +23,6 @@
 
 .player-o {
   color: $contrastingColorNo2;
-}
-
-.player-x,
-.player-o {
-  font-size: 150px;
 }
 
 .winning-box {
