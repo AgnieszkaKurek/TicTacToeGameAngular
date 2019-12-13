@@ -1,1 +1,17 @@
-@import '../../assets/headers.scss';
+@import "../../assets/headers.scss";
+
+.div {
+  font-size: 3em;
+}
+
+@media (max-width: 1000px) {
+  .div {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .div {
+    font-size: 17px;
+  }
+}
