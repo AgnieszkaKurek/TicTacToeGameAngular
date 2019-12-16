@@ -12,40 +12,9 @@ header {
 
 footer {
   text-shadow: black 0.1em 0.1em 0.2em;
-  background-color: darkmagenta;
 }
 
 header,
 footer {
   color: $mainColor;
-}
-
-@media (max-width: 1200px) {
-  aside {
-    width: 160px;
-  }
-}
-
-@media (max-width: 1000px) {
-  aside {
-    width: 130px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  aside {
-    width: 100%;
-    &.left {
-      font-size: 20px;
-    }
-    &.right {
-      font-size: 15px;
-    }
-  }
-  article {
-    margin-left: auto;
-    margin-right: auto;
-    top: 50%;
-    left: 50%;
-  }
 }
