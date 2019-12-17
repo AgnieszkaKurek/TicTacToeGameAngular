@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './game.component.html',
   styleUrls: [
     './game.component.behavior.scss',
-    './game.component.rwd.scss' // todo: incorrect name
+    './game.component.rwd.scss'
   ]
 })
 export class GameComponent {
