@@ -12,6 +12,7 @@ aside {
   width: 250px;
   &.left {
     order: 1;
+    margin-right: 10px;
   }
   &.right {
     order: 3;
