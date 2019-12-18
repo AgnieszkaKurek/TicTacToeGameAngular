@@ -9,7 +9,7 @@ import { TicTacToeGameStatus } from '../models/tic-tac-toe-game-status.enum';
   templateUrl: './box.component.html',
   styleUrls: [
     './box.component.behavior.scss',
-    './box.component.rwd.scss' // todo: incorrect name
+    './box.component.rwd.scss',
   ]
 })
 export class BoxComponent {
