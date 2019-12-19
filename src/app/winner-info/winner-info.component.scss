@@ -1,13 +1,13 @@
 @import "../../assets/variables.scss";
 
 .winner-info {
-  font-size: 3em;
+  font-size: 48px;
   color: $vividColor;
 }
 
 @media (max-width: 1000px) {
   .winner-info {
-    font-size: 2em;
+    font-size: 32px;
   }
 }
 
