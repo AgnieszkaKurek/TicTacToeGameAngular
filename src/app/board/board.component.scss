@@ -1,3 +1,5 @@
+@import "../../assets/variables.scss";
+
 :host {
   clear: both;
   display: table;
@@ -5,5 +7,30 @@
   padding: 0;
   &:focus {
     outline: none;
+  }
+  width: 3 * $boxSizeNormal;
+}
+
+@media (max-width: 896px) {
+  :host {
+    width: 3 * $boxSizeMedium;
+  }
+}
+
+@media (max-width: 640px) {
+  :host {
+    width: 3 * $boxSizeSmall;
+  }
+}
+
+@media (max-width: 414px) {
+  :host {
+    width: 3 * $boxSizeTiny;
+  }
+}
+
+@media (max-width: 320px) {
+  :host {
+    width: 3 * $boxSizeMicro;
   }
 }
