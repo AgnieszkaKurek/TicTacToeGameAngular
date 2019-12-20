@@ -3,13 +3,13 @@
   display: block;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 896px) {
   .next-player-info {
     font-size: 17px;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media (max-width: 640px) {
   .next-player-info {
     font-size: 15px;
   }

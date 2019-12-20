@@ -23,19 +23,19 @@ footer {
   width: 100%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1224px) {
   aside {
     width: 160px;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   aside {
     width: 130px;
   }
 }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 896px) {
   :host {
     flex-direction: column;
   }
