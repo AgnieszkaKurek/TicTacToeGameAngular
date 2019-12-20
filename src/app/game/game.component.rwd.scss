@@ -1,6 +1,8 @@
+@import "../../assets/variables.scss";
+
 article {
   order: 2;
-  max-width: 560px;
+  width: 3 * $boxSizeNormal;
 }
 
 footer {
@@ -11,7 +13,6 @@ aside {
   width: 250px;
   &.left {
     order: 1;
-    margin-right: 10px;
   }
   &.right {
     order: 3;
@@ -49,10 +50,28 @@ footer {
     }
   }
   article {
-    max-width: 500px;
+    width: 3 * $boxSizeMedium;
     margin-left: auto;
     margin-right: auto;
     top: 50%;
     left: 50%;
+  }
+}
+
+@media (max-width: 640px) {
+  article {
+    width: 3 * $boxSizeSmall;
+  }
+}
+
+@media (max-width: 414px) {
+  article {
+    width: 3 * $boxSizeTiny;
+  }
+}
+
+@media (max-width: 320px) {
+  article {
+    width: 3 * $boxSizeMicro;
   }
 }

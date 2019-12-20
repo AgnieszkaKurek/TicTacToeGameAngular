@@ -1,50 +1,52 @@
+@import "../../assets/variables.scss";
+
 .container {
   box-sizing: border-box;
-  width: 185px;
-  height: 185px;
+  width: $boxSizeNormal;
+  height: $boxSizeNormal;
   padding: 0;
 }
 
 .player-x,
 .player-o {
-  font-size: 150px;
+  font-size: $boxSizeNormal;
 }
 
 @media (max-width: 896px) {
   .container {
-    width: 160px;
-    height: 160px;
+    width: $boxSizeMedium;
+    height: $boxSizeMedium;
   }
 }
 
 @media (max-width: 640px) {
   .container {
-    width: 150px;
-    height: 150px;
+    width: $boxSizeSmall;
+    height: $boxSizeSmall;
   }
   .player-x,
   .player-o {
-    font-size: 150px;
+    font-size: $boxSizeSmall;
   }
+}
 
-  @media (max-width: 414px) {
-    .container {
-      width: 115px;
-      height: 115px;
-    }
-    .player-x,
-    .player-o {
-      font-size: 115px;
-    }
+@media (max-width: 414px) {
+  .container {
+    width: $boxSizeTiny;
+    height: $boxSizeTiny;
   }
-  @media (max-width: 320px) {
-    .container {
-      width: 100px;
-      height: 100px;
-    }
-    .player-x,
-    .player-o {
-      font-size: 100px;
-    }
+  .player-x,
+  .player-o {
+    font-size: $boxSizeTiny;
+  }
+}
+@media (max-width: 320px) {
+  .container {
+    width: $boxSizeMicro;
+    height: $boxSizeMicro;
+  }
+  .player-x,
+  .player-o {
+    font-size: $boxSizeMicro;
   }
 }
