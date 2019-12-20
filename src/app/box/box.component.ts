@@ -7,7 +7,10 @@ import { TicTacToeGameStatus } from '../models/tic-tac-toe-game-status.enum';
 @Component({
   selector: 'ttt-box',
   templateUrl: './box.component.html',
-  styleUrls: ['./box.component.scss']
+  styleUrls: [
+    './box.component.behavior.scss',
+    './box.component.rwd.scss',
+  ]
 })
 export class BoxComponent {
 

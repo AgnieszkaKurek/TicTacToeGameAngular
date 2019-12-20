@@ -1,1 +1,16 @@
-@import '../../assets/headers.scss';
+@import "../../assets/headers.scss";
+.next-player-info {
+  display: block;
+}
+
+@media (max-width: 896px) {
+  .next-player-info {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 640px) {
+  .next-player-info {
+    font-size: 15px;
+  }
+}

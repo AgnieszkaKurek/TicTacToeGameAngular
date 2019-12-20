@@ -1,13 +1,11 @@
 @import "../../assets/variables.scss";
 
-:host {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+article {
+  order: 2;
 }
 
-header {
-  font-size: 25px;
+footer {
+  order: 4;
 }
 
 aside {
@@ -20,36 +18,27 @@ aside {
   }
 }
 
-article {
-  order: 2;
-  max-width: 600px;
-  margin: 5px 1px 1px;
-}
-
-footer {
-  order: 4;
-  text-shadow: black 0.1em 0.1em 0.2em;
-}
-
 header,
 footer {
   width: 100%;
-  color: $mainColor;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1224px) {
   aside {
     width: 160px;
   }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1024px) {
   aside {
     width: 130px;
   }
 }
 
-@media screen and (max-width: 770px) {
+@media (max-width: 896px) {
+  :host {
+    flex-direction: column;
+  }
   aside {
     width: 100%;
     &.left {

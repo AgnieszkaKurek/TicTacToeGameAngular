@@ -1,0 +1,52 @@
+@import "../../assets/variables.scss";
+
+.container {
+  box-sizing: border-box;
+  width: $boxSizeNormal;
+  height: $boxSizeNormal;
+  padding: 0;
+}
+
+.player-x,
+.player-o {
+  font-size: $boxSizeNormal;
+}
+
+@media (max-width: 896px) {
+  .container {
+    width: $boxSizeMedium;
+    height: $boxSizeMedium;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: $boxSizeSmall;
+    height: $boxSizeSmall;
+  }
+  .player-x,
+  .player-o {
+    font-size: $boxSizeSmall;
+  }
+}
+
+@media (max-width: 414px) {
+  .container {
+    width: $boxSizeTiny;
+    height: $boxSizeTiny;
+  }
+  .player-x,
+  .player-o {
+    font-size: $boxSizeTiny;
+  }
+}
+@media (max-width: 320px) {
+  .container {
+    width: $boxSizeMicro;
+    height: $boxSizeMicro;
+  }
+  .player-x,
+  .player-o {
+    font-size: $boxSizeMicro;
+  }
+}
