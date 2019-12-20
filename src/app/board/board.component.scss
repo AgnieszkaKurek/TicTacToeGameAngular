@@ -1,7 +1,7 @@
 @import "../../assets/variables.scss";
 
 @function getBoardWidth($boxSize) {
-  @return 3 * $boxSize;
+  @return 3 * $boxSize + 1px;
 }
 
 :host {
@@ -12,7 +12,7 @@
   &:focus {
     outline: none;
   }
-  width: 3 * $boxSizeNormal;
+  width: getBoardWidth($boxSizeNormal);
 }
 
 @media (max-width: 896px) {
