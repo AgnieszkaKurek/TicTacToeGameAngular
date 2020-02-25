@@ -11,7 +11,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Continuous Integration
 Check travis pipeline:
-[![Build Status](https://travis-ci.org/AgnieszkaKurek/MyTouristGuide.svg?branch=master)](https://travis-ci.org/AgnieszkaKurek/TicTacToeGameAngular)
+[![Build Status](https://travis-ci.org/AgnieszkaKurek/MyTouristGuide.svg?branch=master)](https://travis-ci.org/AgnieszkaKurek/MyTouristGuide)
 
 ## Continuous Delivery
 Application is deployed into [https://agnieszkakurek.github.io/TicTacToeGameAngular](https://agnieszkakurek.github.io/TicTacToeGameAngular) on every push to master by [Travis pipeline](https://travis-ci.org/AgnieszkaKurek/TicTacToeGameAngular)
